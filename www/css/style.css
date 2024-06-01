@@ -1,0 +1,327 @@
+/* FONTS start */
+
+/* yeseva-one-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options.*/
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/yeseva-one-v22-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-sans-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/nunito-sans-v15-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-sans-italic - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/nunito-sans-v15-latin-italic.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* FONTS end */
+
+/* настройки модели расчета ширины блоков, фиксация на заданные значения */
+html {
+    box-sizing: border-box;    
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Nunito Sans, Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: #131313;
+    color: #FFFFFF;
+}
+
+.header__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1263px;
+    height: 83px;
+    margin: 0px auto;
+    /* border: 1px solid rgb(28, 215, 203); */
+}
+
+.wrapper {
+    position: relative;
+    width: 1440px;
+    margin: 0px auto;
+    /* border: 1px solid rgb(236, 0, 0); */
+
+}
+.header__nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+address>a {
+    font-size: 11px;
+    color: #E3B873;
+    margin-right: 45px;
+}
+address>a:hover, address>a:active, address>a:focus {
+    opacity: 75%;
+}
+
+.header__logo {
+    color: #E3B873;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-right: 95px ;
+}
+
+.header__navlinks {
+    margin-right: 67px;
+}
+.header__navlink {
+    display: inline;
+    margin-right: 47px  ;
+}
+
+.header__link {
+    color: white;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.header__link:hover, .header__link:focus, .header__link:active {
+    color: #E3B873;
+}
+.btn {
+    background-color: #E3B873;
+    color: white;
+    min-width: 161px;
+    height: 37px;
+    border-radius: 2px;
+    border: 0px;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding: 13px 33px;
+} 
+
+.btn__h57 {
+    height: 57px;
+    width: 215px;
+    padding: 22px 23px;
+    
+}
+
+.btn:hover, .btn:focus, .btn:active {
+   background-color: rgb(0, 153, 255);
+   transition: 0.3s;
+}
+.btn_italic {
+    font-style: italic;
+}
+
+.btn_transparent {
+    background-color: transparent;
+    border-color: white;
+    border: 1px solid;
+    margin-left: 21px;
+}
+
+section {
+    width: 1263px;
+    margin: 0px auto;
+}
+
+.buttons {
+    display: flex;
+    margin-right: 10px;
+    flex-wrap: no-wrap;
+    width: auto;
+
+}
+.chapter_1 {
+    position: relative;
+    height: 707px;
+    padding-top: 194px;
+    padding-left: 134px;
+    z-index: 1;    
+    background-color: rgba(0, 0, 0, 0.7);
+    /* border: 1px solid white; */
+}
+.chapter_1_background {
+    width:100%;
+    height:100%;
+    z-index: 2;
+    background-image: url("../img/chapter1_bg.png");
+    background-position: left -130px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-family: Yeseva One;
+    max-width: 15em;
+    line-height: 132%;
+}
+.title_top {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 19px ;
+}
+
+.title_top_city {
+    color: #E3B873;
+}
+
+.text_info {
+    line-height: 164%;
+    max-width: 480px;
+    margin-bottom: 46px;
+    font-size: 22px;
+    font-family: ;
+}
+
+.chapter_2 {
+    position: absolute;
+    width: 100%;
+    height: 1074px;
+    padding-top: 107px;
+    padding-left: 134px;
+    /* border-color: blue;
+    border: 1px solid green; */
+
+}
+
+.ch2__projects_list {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 736px;
+    /* position: absolute;
+    right: 0px; */
+    /* border: 1px dashed green; */
+}
+
+.ch2_project_list_item {
+    text-transform: uppercase;
+    margin-right: 60.5px;
+    font-family: Yeseva One;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.3);
+    padding-bottom: 7px;
+}
+.ch2_project_list_item_highlight {
+    color: #E3B873;
+    border-bottom: 1px solid #E3B873;
+    cursor: pointer;
+    transition: 0.15s;
+}
+.ch2_project_list_item:hover, .ch2_project_list_item:focus, .ch2_project_list_item:active {
+    color: #E3B873;
+    opacity: 85%;
+    /* border-bottom: 1px solid #E3B873; */
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+/* контейнер для таблицы шаблона "выполненные проекты" 2х2*/
+.ch2_projects_grid {
+    width: 1171px;
+    display: grid;
+    grid-template-columns: 442px 1fr;
+    grid-template-rows: 25px 1fr;
+    gap: 50px;
+}
+
+/* контейнер для таблицы "инфо о проекте" 2х2*/
+.ch2_project_info_grid {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 34px;
+    margin-bottom: 80px;
+}
+
+.ch2_project_info_grid>div {
+    width: fit-content;
+}
+.ch2_title {
+    font-family: Yeseva One;
+    font-size: 27px;
+    color: #E3B873;
+    text-transform: uppercase;
+    margin-bottom: 34px;
+}
+
+.ch2_description {
+    font-size: 14px;
+    line-height: 27px;
+    margin-bottom: 42px;
+}
+.ch2_subtitle {
+    font-family: Yeseva One;
+    font-size: 18px;
+    color: #E3B873;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+}
+
+.ch2_info {
+    font-size: 13px;
+}
+
+.ch2_projects_arrows {
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 17px;
+}
+.big_dot, .big_dot_active {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+.big_dot {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.arrow_left {
+    margin-right: 12px;
+}
+.arrow_right {
+    margin-left: 12px;
+}
+
+.arrow_left:hover, .arrow_right:hover {
+    opacity: 65%;
+    cursor: pointer;
+    clor: #f89a03;
+    transition: 0.15s;
+}
+/* АДАПТИВНЫЙ БЛОК */
+
+/* Мобильная верстка на экранах < 1300 px. */
+@media (max-width: 1300px) {
+    /* todo */
+}
+
+/* Опционально: модифицировать мобильную верстку для разрешения > 768 px. */
+@media (min-width: 768px) and (max-width: 1300){
+    /* todo */
+}
