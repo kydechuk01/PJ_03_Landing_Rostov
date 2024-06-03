@@ -40,8 +40,7 @@ function updateProjectInfo (index=1) {
     // остальные контейнеры скрываем
     projectsImgBoxes[index-1].style.display = 'block';
     projectsImgBoxes.forEach((element, key) => {
-        if (key == index - 1) element.style.display = 'block'; 
-        else element.style.display  =  'none'; 
+        if (key != index - 1) element.style.display = 'none'; 
     });
 
     // проходим массив ссылок на проекты:
