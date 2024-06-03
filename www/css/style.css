@@ -129,9 +129,14 @@ address>a:hover, address>a:active, address>a:focus {
 }
 
 .btn:hover, .btn:focus, .btn:active {
-   background-color: rgb(0, 153, 255);
+   background-color: #E3B873;
    transition: 0.3s;
 }
+
+.btn_call:hover, .btn_call:focus, .btn_call:active {
+    background-color: rgb(0, 153, 255);
+}
+
 .btn_italic {
     font-style: italic;
 }
@@ -194,7 +199,6 @@ h1 {
     max-width: 480px;
     margin-bottom: 46px;
     font-size: 22px;
-    font-family: ;
 }
 
 .chapter_2 {
@@ -291,14 +295,14 @@ h1 {
     flex-wrap: nowrap;
     column-gap: 17px;
 }
-.big_dot, .big_dot_active {
+.big_dot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #FFFFFF;
-}
-.big_dot {
     background-color: rgba(255, 255, 255, 0.3);
+}
+.big_dot_active {
+    background-color: #FFFFFF;
 }
 
 .arrow_left {
@@ -311,7 +315,6 @@ h1 {
 .arrow_left:hover, .arrow_right:hover {
     opacity: 65%;
     cursor: pointer;
-    clor: #f89a03;
     transition: 0.15s;
 }
 /* АДАПТИВНЫЙ БЛОК */
