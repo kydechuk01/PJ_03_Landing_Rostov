@@ -38,11 +38,14 @@
 /* настройки модели расчета ширины блоков, фиксация на заданные значения */
 html {
     box-sizing: border-box;    
+    scroll-behavior: smooth;
+
 }
 
 *, *::before, *::after {
     box-sizing: inherit;
 }
+
 
 body {
     font-family: Nunito Sans, Verdana, Geneva, Tahoma, sans-serif;
@@ -68,7 +71,7 @@ body {
     position: relative;
     width: 1440px;
     margin: 0 auto;
-    /* border: 1px solid rgb(236, 0, 0);  */
+    /* border: 1px solid rgb(236, 0, 0); */
 }
 .header__nav {
     display: flex;
@@ -443,6 +446,12 @@ h1 {
     
 }
 
+.ch3_form_input:focus, .ch3_form_input:active {
+    background-color: #e3b8731a;
+    border-color: rgba(0, 0, 0, 0.155);
+    border: 0;
+    outline: 0;
+}
 .ch3_form_input::placeholder {
     color: black;
 }
@@ -517,7 +526,6 @@ h1 {
     grid-template-columns: repeat(3,392px);
     gap: 30px;
     margin-inline: 100px;
-    margin-bottom: 124px;
     min-height: 608px;
 }
 
@@ -558,6 +566,73 @@ h1 {
     font-size: 18px;
     color: white;
     text-transform: uppercase; 
+}
+
+.chapter_5_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 509px;
+    gap: 5px;
+    min-height: 725px;
+    background-color: white;
+    color: black;
+    margin-top: 0px;
+    
+}
+
+.ch5_measure_help {
+    background-image: url('../img/ch5_background.png');
+    background-repeat: no-repeat;
+    background-size: 75%;
+    /* border: 1px dashed green; */
+}
+
+.ch5_measure_checklist {
+    position: relative;
+    margin-left: 249px;
+    width: 316px;
+    padding-top: 10px;
+    height: 100%;
+}
+
+.ch5_measure_checklist {
+    position: relative;
+    list-style-type: none;
+    counter-reset: list-index;
+    width: fit-content;
+    min-width: 374px;
+}
+
+.ch5_measure_checklist > li {
+    counter-increment: list-index;
+    position: relative;	
+    margin-bottom: 105px; /* уточнить */
+    font-size: 14px;
+}
+
+.ch5_measure_checklist > li:before {
+    content: "0" counter(list-index);
+    position: absolute;
+    display: inline-block;
+    top: -10px;
+    left: -48px;
+    width: 42px;
+    height: 42px;
+    line-height: 28px;
+    border-radius: 50%;
+    border: 8px solid rgb(250, 250, 250);
+    background-color: #E3B873;
+    font-family: Yeseva One;
+    color: white;
+    text-align: center;
+}
+
+.ch5_measure_form {
+    position: relative;
+    width: 506px;
+    height: 509px;
+    background-color: black;
+    color: white;
 }
 
 
