@@ -519,11 +519,10 @@ h1 {
     margin-inline: 100px;
     margin-bottom: 124px;
     min-height: 608px;
-    /* border: 1px dashed darkgoldenrod; */
 }
 
 .ch4_typeofrepair_card {
-    border: 1px dotted green;
+    position: relative;
 }
 
 .ch4_typeofrepair_title {
@@ -539,14 +538,27 @@ h1 {
     background-color: white;
     top: -127px;
     width: 330px;
+    min-height: 286px;
     color: #959595;
     line-height: 205%;
     font-size: 13px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
-    /* border: 1px dashed red; */
 }
 
-
+.ch4_typeofrepair_cost {
+    position: absolute;
+    padding: 17px 21px;
+    min-width: 228px;
+    min-height: 54px;
+    bottom: -22px;
+    left: 0px;
+    background-color: #E3B873;
+    box-shadow: 5px 5px 10px #e3b8734f;
+    font-family: Yeseva One;
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase; 
+}
 
 
 /* АДАПТИВНЫЙ БЛОК */
