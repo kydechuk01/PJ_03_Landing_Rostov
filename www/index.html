@@ -70,7 +70,7 @@
             
             <!-- Section 2 - Our Projects -->
 
-            <section class="wrapper">
+            <section class="wrapper" id="ch2">
                 <div class="chapter_2">
                     <div class="ch2_projects_grid">
                         <div>&nbsp;</div>
@@ -127,7 +127,7 @@
             </section>
 
             <!-- Section 3 Online-control -->
-            <section class="wrapper">
+            <section class="wrapper" id="ch3">
                 <div class="chapter_3">
                     <div class="chapter_3_intro">
                         <h2 class="chapter3_title">online control</h2>
@@ -143,19 +143,67 @@
                         <div class="ch3_online_desc">
                             <img src="./img/line_w54.svg" alt="line" width="55" height="3">
                         </div>
-                            <div class="ch3_online_desc">
-                                <div class="black-font">At each facility, a camera is installed that broadcasts the progress of work on the clock.
-                                    At any time, you can go to our website and monitor the progress of work in your apartment. You can watch the
-                                    live broadcast from one of our facilities! <br>Leave a request below and you will receive a link to the
-                                    broadcast.</div>
-                            </div>
+                        <div class="ch3_online_desc">
+                            <div class="black-font">At each facility, a camera is installed that broadcasts the progress of work on the clock.
+                                At any time, you can go to our website and monitor the progress of work in your apartment. You can watch the
+                                live broadcast from one of our facilities! <br>Leave a request below and you will receive a link to the
+                                broadcast.</div>
+                        </div>
+                        <div class="watch_request">
+                            <form action="#" method="post">
+                            <div class="watch_req_form_grid">
+                                    <div class="ch3_form_elem">
+                                        <label class="ch3_form_elem_title">Name:
+                                        <input class="ch3_form_input" name="name" placeholder="What is your name:">
+                                        </label>
+                                    </div>
+                                    <div class="ch3_form_elem">
+                                        <label class="ch3_form_elem_title">Phone:
+                                        <input class="ch3_form_input" name="phone" placeholder="Your phone number:">
+                                        </label>
+                                    </div>
+                                    <div class="ch3_form_elem">
+                                        <button id="ch3_btn_submit" type="submit" class="btn btn_call btn_submit" disabled="disabled">submit</button>
+                                    </div>
+                                </div>
+                                <div class="ch3_form_agree_personal_data">
+                                    <!-- по умолчанию кнопка отключена, чекбокс включает -->
+                                <input type="checkbox" class="ch3_checkbox" id="ch3_checkbox" name="watch_req_personal_data" value="agree" onchange="document.querySelector('#ch3_btn_submit').disabled = !this.checked">
+                                <label for="ch3_checkbox" class="ch3_checkbox_label">I agree to the processing of personal data</label>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <!-- Section 4 Types of repair -->
             <section class="wrapper">
-
+                <div class="chapter_4">
+                    <h2 class="chapter4_title">TYPES OF REPAIR</h2>
+                    <div class="chapter4_title">
+                        <img src="./img/line_w32.png" alt="line">
+                        <img src="./img/ch4_types-of-repair.svg" alt="Types of repair">
+                        <img src="./img/line_w32.png" alt="line">
+                    </div>
+                    <div class="ch4_types_grid">
+                        <div class="ch4_typeofrepair_card">
+                            <img src="./img/ch4_types_img_01.jpg" alt="Redecorating">
+                            <div class="ch4_typeofrepair_info">
+                                <h3 class="ch4_typeofrepair_title">Redecorating</h3>
+                                • Dismantling of old coatings<br>
+                                • Wallpapering<br>
+                                • Painting walls and ceilings<br>
+                                • Laying flooring<br>
+                                • Replacing plumbing<br>
+                                • Replacing sockets and switches<br>
+                                • Replacing doors<br>
+                            </div>
+                        </div>
+                       <img src="./img/ch4_types_img_02.jpg" alt="Overhaul">
+                       <img src="./img/ch4_types_img_03.jpg" alt="Designer Repair">                       
+                    </div>
+               </div>
             </section>
             
             <!-- Section 5 Request for measurement -->
