@@ -57,10 +57,10 @@
                             work</p>
                         <p class="buttons">
                             <button type="submit"
-                                class="btn btn_italic btn_transparent btn__h57"
+                                class="btn btn_italic btn_transparent btn--h57"
                                 name="btn_calc_cost">CALCULATE THE COST</button>
                             <button type="submit"
-                                class="btn btn_italic btn_transparent btn__h57"
+                                class="btn btn_italic btn_transparent btn--h57"
                                 name="btn_submit_application">SUBMIT YOUR
                                 APPLICATION</button>
                         </p>
@@ -164,7 +164,7 @@
                                         </label>
                                     </div>
                                     <div class="ch3_form_elem">
-                                        <button id="ch3_btn_submit" type="submit" class="btn btn_call btn_submit" disabled="disabled">submit</button>
+                                        <button id="ch3_btn_submit" type="submit" class="btn btn_call btn_submit  btn--w200" disabled="disabled">submit</button>
                                     </div>
                                 </div>
                                 <div class="ch3_form_agree_personal_data">
@@ -249,19 +249,66 @@
             
             <!-- Section 5 Request for measurement -->
             <section class="wrapper" id="measurement">
+                <!-- сетка на 3 колонки -->
                 <div class="chapter_5_grid">
-                    <div class="ch5_measure_help">
+                    <!-- контент левая колонка -->
+                    <div class="ch5_measure_help__list">
                         <ol class="ch5_measure_checklist">
-                            <li>Our specialist will arrive for measurements per day<Br> contact, or appoint a date convenient for you
+                            <li class="ch5_measure_checklist__item">Our specialist will arrive for measurements per day<br>
+                                contact, or appoint a date convenient for you
                             </li>
-                            <li>Free metering</li>
-                            <li>Free consultation</li>
-                            <li>Get a cost estimate and the timing of your future repairs</li>
+                            <li class="ch5_measure_checklist__item">Free metering</li>
+                            <li class="ch5_measure_checklist__item">Free consultation</li>
+                            <li class="ch5_measure_checklist__item">Get a cost estimate and the timing of your future repairs</li>
                         </ol>
                     </div>
-                    <div class="ch5_measure_form">
-                        Leave a request for free
-                        departure of the measurer
+                    <!-- контент правая колонка с формой-->
+                    <div class="ch5_measure__form_space">
+                        <!-- форма -->
+                        <div class="ch5_measure__form_block_form">
+                            <!-- заголовок -->
+                            <h3 class="ch5_measure_title"> Leave a request for free<br>
+                            departure of the measurer</h3>               
+                            <!-- форма -->
+                            <form action="#" method="post" class="ch5__form">
+                                    <div class="ch5__form__elem">
+                                        <label class="ch5_form_elem_title">Name:
+                                        <input class="ch5_form_input" name="name" placeholder="What is your name">
+                                        </label>
+                                    </div>
+                                    <div class="ch5__form__elem">
+                                        <label class="ch5_form_elem_title">Phone:
+                                        <input class="ch5_form_input" name="phone" placeholder="Your phone number">
+                                        </label>
+                                    </div>
+                                    <div class="ch5__form__elem">
+                                        <label class="ch5_form_elem_title">Email:
+                                        <input class="ch5_form_input" name="phone" placeholder="Your email">
+                                        </label>
+                                    </div>
+                                    <div class="ch5_form_agree_personal_data">
+                                        <!-- по умолчанию кнопка отключена, чекбокс включает -->
+                                        <input type="checkbox" class="ch5_checkbox" id="ch5_checkbox" name="watch_req_personal_data" value="agree" onchange="document.querySelector('#ch5_btn_submit').disabled = !this.checked">
+                                        <label for="ch5_checkbox" class="ch5_checkbox_label">I agree to the processing of personal data</label>
+                                    </div>
+                                    <div class="ch5__button">
+                                        <button id="ch5_btn_submit" type="submit" class="btn btn_call btn_submit btn--w213" disabled="disabled">Call the measurer</button>
+                                    </div>
+                            </form>
+                        </div>
+                        <!-- блок helpsave с иконкой -->
+                        <div class="ch5_measure__helpsave">
+                            <div class="ch5_helpsave_item">
+                                <img src="./img/moneysave-ico.svg" width="73" height="73" alt="Help save">
+                            </div>
+                            <div class="ch5_helpsave_item">Help save 10 - 20% of the <br>cost of materials
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- отступ справа от формы 100px -->
+                    <div>
+                         &nbsp;
                     </div>
                 </div>
             </section>

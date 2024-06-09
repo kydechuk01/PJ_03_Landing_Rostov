@@ -123,12 +123,21 @@ address>a:hover, address>a:active, address>a:focus {
     padding: 13px 33px;
 } 
 
-.btn__h57 {
+.btn--h57 {
     height: 57px;
     width: 215px;
     padding: 22px 23px;
-    
 }
+.btn--w200 {
+    max-width: 200px;
+}
+
+.btn--w213 {
+    width: 213px;
+}
+
+
+
 
 .btn:hover, .btn:focus, .btn:active {
    background-color: #E3B873;
@@ -570,17 +579,16 @@ h1 {
 
 .chapter_5_grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 509px;
-    gap: 5px;
+    grid-template-columns: 1fr 506px 100px;
+    gap: 0px;
+    margin-top: 0px;
     min-height: 725px;
     background-color: white;
     color: black;
-    margin-top: 0px;
-    
+    /* border: 3px dotted violet; */
 }
 
-.ch5_measure_help {
+.ch5_measure_help__list {
     background-image: url('../img/ch5_background.png');
     background-repeat: no-repeat;
     background-size: 75%;
@@ -591,26 +599,23 @@ h1 {
     position: relative;
     margin-left: 249px;
     width: 316px;
+    /* width: fit-content; */
+    min-width: 374px;
     padding-top: 10px;
     height: 100%;
-}
-
-.ch5_measure_checklist {
-    position: relative;
     list-style-type: none;
     counter-reset: list-index;
-    width: fit-content;
-    min-width: 374px;
+    /* border: 3px dotted green; */
 }
 
-.ch5_measure_checklist > li {
+.ch5_measure_checklist__item {
     counter-increment: list-index;
     position: relative;	
     margin-bottom: 105px; /* уточнить */
     font-size: 14px;
 }
 
-.ch5_measure_checklist > li:before {
+.ch5_measure_checklist__item:before {
     content: "0" counter(list-index);
     position: absolute;
     display: inline-block;
@@ -627,14 +632,127 @@ h1 {
     text-align: center;
 }
 
-.ch5_measure_form {
-    position: relative;
+.ch5_measure__form_space {
+    display: flex;
+    flex-direction: column;
     width: 506px;
-    height: 509px;
-    background-color: black;
-    color: white;
+    /* height: 619px; */
 }
 
+.ch5_measure_title {
+    line-height: 143%;
+    font-size: 18px;
+    width: auto;
+    text-align: center;
+    margin-bottom: 39px;
+}
+
+.ch5_measure__form_block_form {
+    background-color: black;
+    color: white;
+    min-height: 509px;
+    padding-block: 27px;
+    padding-inline: 49px;
+}
+/* стили формы ch5 */
+
+.ch5__form__elem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 48px;
+}
+
+.ch5__form > .ch5__form__elem:nth-of-type(3) {
+    margin-bottom: 16px;
+    /* background-color: rgb(25, 164, 155); */
+}
+
+.ch5_form_elem_title {
+    display: block;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+.ch5_form_input {
+    display: block;
+    width: 408px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    border: 0;
+    padding-block: 8px;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.2);
+    background-color: black;
+    
+}
+
+.ch5_form_input:focus, .ch5_form_input:active {
+    /* background-color: #e3b8731a; */
+    /* border-color: rgb(248, 184, 22); */
+    border-bottom: 1px solid rgba(170, 192, 3, 0.2);
+    outline: 0;
+}
+.ch5_form_input::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+
+.ch5_form_agree_personal_data {
+    display: flex;
+    flex-direction: row;    
+    margin-bottom: 39px;
+}
+
+.ch5_checkbox {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    margin-right: 9px;
+    accent-color: #E3B873;
+}
+
+.ch5_checkbox_label {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+ 
+.ch5_checkbox_label:checked {
+    background-color: rgb(255, 255, 255);
+    border-color: #FFFFFF;
+}
+
+.ch5__button {
+    display: flex;
+    justify-content: end;
+}
+
+#ch5_btn_submit {
+    font-size: 13px;
+}
+#ch5_btn_submit[disabled] {
+    opacity: 70%;
+    filter: grayscale(100%);
+    cursor: not-allowed;
+}
+
+
+.ch5_measure__helpsave {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    width: 506px;
+    margin-top: 42px;
+    margin-left: 31px;
+    /* border: 1px dashed green; */
+}
+
+.ch5_helpsave_item {
+    margin-right: 25px;
+    line-height: 143%;
+    font-size: 18px;
+    color:  #E3B873;
+    align-self: center;
+}
 
 /* АДАПТИВНЫЙ БЛОК */
 
