@@ -56,7 +56,7 @@ body {
     color: #FFFFFF;
 }
 
-.header__wrapper {
+.header__wrapper, .footer__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -64,7 +64,6 @@ body {
     max-width: 1263px;
     height: 83px;
     margin: 0 auto;
-    /* border: 1px solid rgb(28, 215, 203); */
 }
 
 .wrapper {
@@ -501,6 +500,7 @@ h1 {
     margin: 0 auto;
     background-color: white;
 }
+
 .chapter4_title {   
     display: flex; 
     margin: 0 auto;
@@ -511,12 +511,12 @@ h1 {
     color: rgb(0, 0, 0);
     align-items: center;    
     margin-bottom: 12px;
-}
 
-.chapter4_title > img {
-    margin-right: 9px;
-    margin-left: 7px;
-    margin-bottom: 31px;
+    img {
+        margin-right: 9px;
+        margin-left: 7px;
+        margin-bottom: 31px;
+    }
 }
 
 .ch4_types_grid {
@@ -861,13 +861,23 @@ h1 {
     margin: 0 auto 13px;
 }
 
-.ch7_our-clients_ico, .ch7_our-clients_subtitle {
-    margin: 0 auto;
-    display: block;
+.chapter_7_icons {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    margin-inline: auto;
+    margin-bottom: 24px;
+    align-items: center;
+    img {
+        margin-inline: 4px;
+    }
 }
 
-.ch7_our-clients_ico {
-    margin-bottom: 24px;
+.ch7_our-clients_ico, .ch7_our-clients_subtitle {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-self: center;
 }
 
 .ch7_our-clients_subtitle {
@@ -1154,3 +1164,9 @@ h1 {
 @media (min-width: 768px) and (max-width: 1300){
     /* todo */
 }
+
+
+/* горизонтальная ориентация */
+@media (orientation: landscape){
+}
+    
