@@ -31,7 +31,7 @@
                     </ul>
                 </nav>
                 <address class>
-                    <a href="+7-928-768-32-39">+7 (928) 768-32-39</a>
+                    <a href="tel:+7-928-768-32-39">+7 (928) 768-32-39</a>
                 </address>
                 <form action="#" method="post">
                     <button type="submit"
@@ -432,13 +432,16 @@
 
             <!-- Section 8 Any questions -->
             <section class="wrapper" id="questions_and_address">
-                <div class="chapter_8_background_img">
-                    <div class="chapter_8_bg_dark">
+                <div class="chapter_89_background_img">
+                    <div class="chapter_89_bg_dark">
+            
+                        <!-- Chapter 8 Any questions  -->
+            
                         <div class="chapter_8">
                             <h2 class="ch8__questions-form__title">have any questions?</h2>
                             <!-- форма -->
                             <form action="#" method="post" class="ch8__form">
-                            <div class="ch8_questions-form_grid">
+                                <div class="ch8_questions-form_grid">
                                     <div class="ch8__form__elem" id="ch8_form_name">
                                         <label class="ch8_form_elem_title">Name:
                                             <input class="ch8_form_input" name="name" placeholder="What is your name:">
@@ -456,27 +459,75 @@
                                     </div>
                                     <div class="ch8__form__elem ch8_form_agree_personal_data" id="ch8_form_agree">
                                         <!-- по умолчанию кнопка отключена, чекбокс включает -->
-                                        <input type="checkbox" class="ch8_checkbox" id="ch8_checkbox" name="watch_req_personal_data" value="agree"
+                                        <input type="checkbox" class="ch8_checkbox" id="ch8_checkbox" name="watch_req_personal_data"
+                                            value="agree"
                                             onchange="document.querySelector('#ch8_btn_submit').disabled = !this.checked">
-                                        <label for="ch8_checkbox" class="ch8_checkbox_label">I agree to the processing of personal data</label>
+                                        <label for="ch8_checkbox" class="ch8_checkbox_label">I agree to the processing of personal
+                                            data</label>
                                     </div>
                                     <div class="ch8__form__elem ch8__button" id="ch8_form_submit">
-                                        <button id="ch8_btn_submit" type="submit" class="btn btn_call btn_submit btn--w200" disabled="disabled">SUBMIT</button>
+                                        <button id="ch8_btn_submit" type="submit" class="btn btn_call btn_submit btn--w200"
+                                            disabled="disabled">SUBMIT</button>
                                     </div>
                                 </div>
                             </form>
+                        </div>
+
+                        <!-- Chapter 9 Address  -->
+            
+                        <div class="chapter_9">
+                            <!-- address -->
+                            <address class="ch9_address">
+                                <span class="ch9_address_content">
+                                    Rostov-on-Don, Nansen St., 239 Shopping Center<br>
+                                    Decorum Tel <a href="tel:+79287683229" type="phone">+7  (928)  768  32  29</a>
+                                </span>
+                            </address>
+                            <!-- social links  -->
+                            <div class="ch9_social_links">
+                                <a href="mailto:"><img src="./img/ch9_mail-ico.png" width="28" alt="email"></a>
+                                <a href="#"><img src="./img/ch9_social_instagram-ico.png" width="28" alt="Instagram"></a>
                             </div>
-                            <br>
-                            CONTACTS
-                            <br>
-                            MAP
+
+                            <!-- map -->
+                             <div class="ch9_map">
+                                &nbsp;
+                             </div>
+
+                        </div>
                     </div>
                 </div>
             </section>
                      
         </main>
         <footer>
-
+            <div class="header__wrapper">
+                <div class="header__logo">
+                    IC "Repair Design Project"</div>
+                <nav class="header__nav">
+                    <ul class="header__navlinks">
+                        <li class="header__navlink"><a href="#home"
+                                class="header__link">HOME</a></li>
+                        <li class="header__navlink"><a href="#projects"
+                                class="header__link">PROJECTS</a></li>
+                        <li class="header__navlink"><a href="#measurement"
+                                class="header__link">MEASUREMENT</a></li>
+                        <li class="header__navlink"><a href="#"
+                                class="header__link">TEAM</a></li>
+                        <li class="header__navlink"><a href="#reviews"
+                                class="header__link">REVIEWS</a></li>
+                        <li class="header__navlink"><a href="#contacts"
+                                class="header__link">CONTACTS</a></li>
+                    </ul>
+                </nav>
+                <address class>
+                    <a href="tel:+7-928-768-32-39">+7 (928) 768-32-39</a>
+                </address>
+                <form action="#" method="post">
+                    <button type="submit"
+                        class="btn btn_italic btn_call">Request a call</button>
+                </form>
+            </div>
         </footer>
     <script src="js/main.js"></script>
     </body>
