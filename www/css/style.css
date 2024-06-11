@@ -71,7 +71,6 @@ body {
     position: relative;
     width: 1440px;
     margin: 0 auto;
-    /* border: 1px solid rgb(236, 0, 0); */
 }
 .header__nav {
     display: flex;
@@ -129,7 +128,8 @@ address>a:hover, address>a:active, address>a:focus {
     padding: 22px 23px;
 }
 .btn--w200 {
-    max-width: 200px;
+    width: 200px;
+    /* max-width: 200px; */
 }
 
 .btn--w213 {
@@ -183,6 +183,7 @@ section {
 .chapter_1_background {
     width: 100%;
     height: 100%;
+    position: relative;
     z-index: 2;
     background-image: url('../img/chapter1_bg.png');
     background-position: left -130px;
@@ -456,9 +457,6 @@ h1 {
     color: black;
 }
 
-.btn_submit {
-    height: 51px;
-}
 
 .ch3_form_agree_personal_data {
     width: fit-content;
@@ -466,7 +464,6 @@ h1 {
     flex-direction: row;
     margin-inline: auto;
 }
-
 
 .ch3_checkbox {
     width: 18px;
@@ -487,6 +484,10 @@ h1 {
 .ch3_checkbox_label:checked {
     background-color: rgb(255, 255, 255);
     border-color: #FFFFFF;
+}
+
+.btn_submit {
+    height: 51px;
 }
 
 #ch3_btn_submit[disabled] {
@@ -585,7 +586,7 @@ h1 {
 
 .ch5_measure_checklist {
     position: relative;
-    margin-left: 249px;
+    margin-left: 304px;
     width: 316px;
     min-width: 374px;
     padding-top: 10px;
@@ -595,18 +596,23 @@ h1 {
 }
 
 .ch5_measure_checklist__item {
+    position: relative;
+    display: flex;
+    min-height: 42px;
+    align-items: center;
     counter-increment: list-index;
-    position: relative;	
     margin-bottom: 105px; /* уточнить */
     font-size: 14px;
+    
 }
 
 .ch5_measure_checklist__item:before {
+    box-sizing: content-box;
     content: "0" counter(list-index);
     position: absolute;
-    display: inline-block;
+    display: flex;
     top: -10px;
-    left: -48px;
+    left: -66px;
     width: 42px;
     height: 42px;
     line-height: 28px;
@@ -614,8 +620,10 @@ h1 {
     border: 8px solid rgb(250, 250, 250);
     background-color: #E3B873;
     font-family: Yeseva One;
+    font-size: 18px;
     color: white;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .ch5_measure__form_space {
@@ -712,7 +720,9 @@ h1 {
 
 #ch5_btn_submit {
     font-size: 13px;
+    border-radius: 0;
 }
+
 #ch5_btn_submit[disabled] {
     opacity: 70%;
     filter: grayscale(100%);
@@ -795,6 +805,7 @@ h1 {
     background-position:  0 100%;
     background-repeat: repeat-x;
     cursor: pointer;
+    transition: 0.25s;
 }
 
 .ch6_styles_photo_1 {
@@ -805,7 +816,7 @@ h1 {
     min-height: 945px;
     top: -41px;
     z-index: -100;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.14);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .ch6_styles_photo_2 {
@@ -816,7 +827,269 @@ h1 {
     min-height: 937px;
     top: -112px;
     z-index: 100;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
 }
+
+.chapter_7_background {
+    position: relative;
+    z-index: -2;
+    width: 100%;
+    height: 1106px;
+    background-color: white;
+    background-image: url('../img/chapter7_bg_city.png');
+    background-position: bottom;
+    background-repeat: repeat-x;  
+}
+
+.chapter_7 {
+    position: relative;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    height: 100%;
+    padding-top: 111px;
+}
+
+.ch7_our-clients__title {
+    width: 100%;
+    position: relative;
+    font-family: Yeseva One;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto 13px;
+}
+
+.ch7_our-clients_ico, .ch7_our-clients_subtitle {
+    margin: 0 auto;
+    display: block;
+}
+
+.ch7_our-clients_ico {
+    margin-bottom: 24px;
+}
+
+.ch7_our-clients_subtitle {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    line-height: 163%;
+    margin: 0 auto 39px;
+}
+
+.ch7_clients_reviews_grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 376px);
+    gap: 50px;
+    margin-inline: 100px;
+}
+
+.ch7_client-review__card {
+    position: relative;
+    background-color: white;
+    max-width: 376px;
+    min-height: 432px;
+    height: minmax(432px, auto);
+    display: flex;
+    flex-direction: column;
+    /* border: 2px dotted     rgb(10, 117, 224); */
+    padding: 20px 30px 10px 24px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.ch7_client_header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 21px;
+    align-items: center;
+}
+
+.ch7_client_avatar {
+    border-radius: 50%;
+    margin-right: 24px;
+
+}
+
+.ch7_client_name {
+    color: black;
+    font-family: Yeseva One;
+    font-size: 18px;
+}
+
+.ch7_client_review {
+    line-height: 180%;
+    font-size: 13px;
+    color: #959595;
+}
+
+.ch7_client_review>p {
+    margin-bottom: 5px;
+}
+.ch7_review_info_grid {
+    position: absolute;
+    bottom: -26px;
+    left: 0px;
+    min-width: 293px;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.ch7_review_info_grid_item {
+    background-color: #E3B873;
+    display: flex;
+    flex-direction: row;
+    padding: 11px 17px;
+    align-items: center;
+    font-family: Yeseva One;
+    font-size: 17px;
+}
+
+.ch7_review_info_size_value, .ch7_review_info_time_value {
+    margin-left: 15px;
+}
+
+
+.chapter_8_bg_dark {
+    
+    /* z-index: 1;     */
+    background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+.chapter_8 {
+    position: relative;
+    /* z-index: 2; */
+    top: -225px;
+    width: 883px;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: auto;
+    padding-block: 34px;
+    /* border: 5px dashed green; */
+    background-color: #181818;
+}
+
+.chapter_8_background_img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    background-image: url('../img/ch8_background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ch8__questions-form__title {
+    font-family: Yeseva One;
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    justify-self: center;
+    margin-bottom: 46px;
+}
+
+.ch8_questions-form_grid {
+    position: relative;
+    display: grid;
+    min-width: 516px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 53px;
+    /* border: 2px dotted green; */
+    margin-inline: auto;
+}
+
+.ch8__form__elem {
+    /* border: 2px dotted green; */
+}
+#ch8_form_question, #ch8_form_agree, #ch8_form_submit {
+    display: flex;
+    grid-column: span 2;
+    margin-inline: auto;
+    align-content: center;
+    width: 100%;
+}
+
+
+.ch8__form__elem {
+    display: flex;
+    flex-direction: column;
+}
+
+.ch8_form_elem_title {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.ch8_form_input {
+    font-size: 14px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: #181818;
+    border: 0;
+    padding-block: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.ch8_form_input:focus, .ch8_form_input:active {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    outline: 0;
+}
+.ch8_form_input::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+
+.ch8_form_agree_personal_data {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    margin-inline: auto;
+}
+
+.ch8_checkbox {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-right: 8px;
+    accent-color: #E3B873;
+}
+
+.ch8_checkbox_label {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+ 
+.ch8_checkbox_label:checked {
+    background-color: rgb(255, 255, 255);
+}
+
+.ch8_form_agree_personal_data, .ch8__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#ch8_btn_submit {
+    font-size: 13px;
+    border-radius: 0;
+}
+
+#ch8_btn_submit[disabled] {
+    opacity: 70%;
+    filter: grayscale(100%);
+    cursor: not-allowed;
+}
+
+
 
 
 /* АДАПТИВНЫЙ БЛОК */
