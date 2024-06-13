@@ -1,16 +1,23 @@
 const projects_prev_arrow = document.querySelector('#projects_prev_arrow'); // стрелка влево
 const projects_next_arrow = document.querySelector('#projects_next_arrow'); // стрелка вправо
+const projects_prev_mobile  = document.querySelector('.ch2_project_mobile_btn--prev'); // мобильная стрелка влево
+const projects_next_mobile  = document.querySelector('.ch2_project_mobile_btn--next'); // мобильная стрелка вправо
+const fantasies_prev_mobile  = document.querySelector('.ch6_project_mobile_btn--prev'); // мобильная стрелка влево
+const fantasies_next_mobile  = document.querySelector('.ch6_project_mobile_btn--next'); // мобильная стрелка вправо
+
 
 const projectLocation = document.querySelector('#prj_location'); // точка записи инфо по проекту
 const projectTime = document.querySelector('#prj_time'); // точка записи инфо по проекту
 const projectSize = document.querySelector('#prj_size'); // точка записи инфо по проекту
 
 const projectsImgBoxes = document.querySelectorAll('.ch2_project_image_box'); // контейнеры картинки текущего проекта
+const fantasiesImgBoxes = document.querySelectorAll('.ch6_mobile_photo_box'); // картинки фантазий
 const projectsLinks = document.querySelectorAll('.ch2_project_list_item'); // ссылки на проекты
 const projectDots = document.querySelectorAll('.big_dot'); // точки-индикаторы текущего проекта
 
 
 let projectIndex = 1; //Rostov admiral
+let fantasiesIndex = 1; // first picture
 
 /* Массив проектов */
 let projectsInfo = [{
@@ -58,7 +65,16 @@ function updateProjectInfo (index=1) {
     });
 }
 
-// обработчик стрелки на следующий проект
+function updateFantasyImg (index=1) {
+    // показываем контейнер изображения проекта с номером index,
+    // остальные контейнеры скрываем
+    fantasiesImgBoxes[index-1].style.display = 'block';
+    fantasiesImgBoxes.forEach((element, key) => {
+        if (key != index - 1) element.style.display = 'none'; 
+    });
+};
+
+// обработчик десктопной стрелки на следующий проект
 projects_next_arrow.addEventListener('click', () => {
 
     projectIndex++;
@@ -69,7 +85,7 @@ projects_next_arrow.addEventListener('click', () => {
 
 });
 
-// обработчик стрелки на предыдущий проект
+// обработчик десктопной стрелки на предыдущий проект
 projects_prev_arrow.addEventListener('click', () => {
 
     projectIndex--;
@@ -87,5 +103,49 @@ projectsLinks.forEach((element,key)  =>  {
         projectIndex  =  key + 1;
         updateProjectInfo(projectIndex);
     });
+
+});
+
+// обработчик мобильной стрелки на следующий проект
+projects_next_mobile.addEventListener('click', () => {
+
+    projectIndex++;
+    if (projectIndex > projectsInfo.length) {
+        projectIndex = 1;
+    };
+    updateProjectInfo(projectIndex);
+
+});
+
+// обработчик мобильной стрелки на предыдущий проект
+projects_prev_mobile.addEventListener('click', () => {
+
+    projectIndex--;
+    if (projectIndex < 1) {
+        projectIndex = projectsInfo.length
+    };
+    updateProjectInfo(projectIndex);
+
+});
+
+// обработчик мобильной стрелки на следующее фото фантазии
+fantasies_next_mobile.addEventListener('click', () => {
+
+    fantasiesIndex++;
+    if (fantasiesIndex > fantasiesImgBoxes.length) {
+        fantasiesIndex = 1;
+    };
+    updateFantasyImg(fantasiesIndex);
+
+});
+
+// обработчик мобильной стрелки на предыдущее фото фантазии
+fantasies_prev_mobile.addEventListener('click', () => {
+
+    fantasiesIndex--;
+    if (fantasiesIndex < 1) {
+        fantasiesIndex = fantasiesImgBoxes.length
+    };
+    updateFantasyImg(fantasiesIndex);
 
 });

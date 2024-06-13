@@ -14,7 +14,7 @@
             <div class="header__wrapper">
                 <div class="header__logo">
                     IC "Repair Design Project"</div>
-                <nav class="header__nav">
+                <nav class="header__nav mobile_hidden">
                     <ul class="header__navlinks">
                         <li class="header__navlink"><a href="#home"
                                 class="header__link">HOME</a></li>
@@ -30,10 +30,10 @@
                                 class="header__link">CONTACTS</a></li>
                     </ul>
                 </nav>
-                <address class>
-                    <a href="tel:+7-928-768-32-39">+7 (928) 768-32-39</a>
+                <address>
+                    <a href="tel:+7-928-768-32-39" class="phone">+7 (928) 768-32-39</a>
                 </address>
-                <form action="#" method="post">
+                <form action="#" method="post" class=" mobile_hidden">
                     <button type="submit"
                         class="btn btn_italic btn_call">Request a call</button>
                 </form>
@@ -55,7 +55,7 @@
                             with work time saving up to 45 days and 20% from
                             cost of materials due to the organization of
                             work</p>
-                        <p class="buttons">
+                        <p class="ch1_buttons_block">
                             <button type="submit"
                                 class="btn btn_italic btn_transparent btn--h57"
                                 name="btn_calc_cost">CALCULATE THE COST</button>
@@ -73,23 +73,46 @@
             <section class="wrapper" id="projects">
                 <div class="chapter_2">
                     <div class="ch2_projects_grid">
+                        <!-- пустой блок заглушка -->
                         <div>&nbsp;</div>
+                        <!-- блок горизонтального переключателя проектов -->
                         <div>
-                            <ul class="ch2__projects_list">
+                            <ul class="ch2__projects_list mobile_hidden">
                                 <li class="ch2_project_list_item ch2_project_list_item_highlight" id="project1">Rostov-on-Don, Admiral</li>
                                 <li class="ch2_project_list_item" id="project2">Sochi Thieves</li>
                                 <li class="ch2_project_list_item" id="project3">Rostov-on-Don Patriotic</li>
                             </ul>
                         </div>
-                        <div>
+                        <!-- блок COMPLETED PROJECTS -->
+                        <div class="ch2_projects_intro">
                             <h2 class="ch2_title">Completed<br>projects</h2>
                             <p class="ch2_description">Only a small part of the
                                 work performed by our company is presented on
                                 the site. For 14 years on in the
-                                construction<br>
+                                construction
                                 market we have made happy more than 1000
                                 families</p>
-                            <div class="ch2_project_info_grid">
+                        </div>
+                        <!-- блок фотографий -->
+                        <div class="ch2_project_photo">
+                            <div class="ch2_project_image_box" id="project1_photo">
+                                <img src="img/projects_img_01.jpg" alt="Rostov-on-Don LCD admiral" class="ch2_project_image">
+                            </div>
+                            <div class="ch2_project_image_box" style="display: none;" id="project2_photo">
+                                <img src="img/projects_img_02.jpg" alt="Sochi Thieves" class="ch2_project_image">
+                            </div>
+                            <div class="ch2_project_image_box" style="display: none;" id="project3_photo">
+                                <img src="img/projects_img_03.jpg" alt="Rostov-on-Don Patriotic" class="ch2_project_image">
+                            </div>
+                            <button class="ch2_project_mobile_btn ch2_project_mobile_btn--prev mobile_show">
+                                <img src="./img/icon-round-left.svg" width="36" height="36">
+                            </button>
+                            <button class="ch2_project_mobile_btn ch2_project_mobile_btn--next mobile_show">
+                                <img src="./img/icon-round-right.svg" width="36" height="36">
+                            </button>
+                        </div>
+                        <!-- блок инфо о проекте -->
+                        <div class="ch2_project_info_grid">
                                 <div>
                                     <h3 class="ch2_subtitle">City:</h3>
                                     <p class="ch2_info" id="prj_location">Rostov-on-Don<br>LCD admiral</p>
@@ -103,27 +126,16 @@
                                 <div>
                                     <h3 class="ch2_subtitle">Repair Cost:</h3>
                                     <p class="ch2_info" id="prj_cost">Upon request</p></div>
-                            </div>
-                            <div class="ch2_projects_arrows">
-                                <img id="projects_prev_arrow" src="img/arrow_left_thin.svg" alt="previous" class="arrow_left">
+                        </div>
+                        <!-- блок стрелок смены проекта -->
+                        <div class="ch2_projects_arrows mobile_hidden">
+                                <img src="img/arrow_left_thin.svg" id="projects_prev_arrow" width="42" height="14" alt="previous" class="arrow_left">
                                 <div id="dot_1" class="big_dot big_dot_active"></div>
                                 <div id="dot_2" class="big_dot"></div>
                                 <div id="dot_3" class="big_dot"></div>
-                                <img  id="projects_next_arrow"  src="img/arrow_right_thin.svg" alt="next" class="arrow_right">
-                                
-                            </div>
-                        </div>
-                        <div class="ch2_project_image_box" id="project1_photo">
-                            <img src="img/projects_img_01.jpg" alt="Rostov-on-Don LCD admiral" class="ch2_project_image">
-                        </div>
-                        <div class="ch2_project_image_box" style="display: none;" id="project2_photo">
-                            <img src="img/projects_img_02.jpg" alt="Sochi Thieves" class="ch2_project_image">
-                        </div>
-                        <div class="ch2_project_image_box" style="display: none;" id="project3_photo">
-                            <img src="img/projects_img_03.jpg" alt="Rostov-on-Don Patriotic" class="ch2_project_image">
+                                <img src="img/arrow_right_thin.svg" id="projects_next_arrow" width="42" height="14" alt="next" class="arrow_right">
                         </div>
                     </div>
-                    <span id="team"></span>
                 </div>
             </section>
 
@@ -145,7 +157,7 @@
                             <img src="./img/line_w54.svg" alt="line" width="55" height="3">
                         </div>
                         <div class="ch3_online_desc">
-                            <div class="black-font">At each facility, a camera is installed that broadcasts the progress of work on the clock.
+                            <div>At each facility, a camera is installed that broadcasts the progress of work on the clock.
                                 At any time, you can go to our website and monitor the progress of work in your apartment. You can watch the
                                 live broadcast from one of our facilities! <br>Leave a request below and you will receive a link to the
                                 broadcast.</div>
@@ -153,25 +165,26 @@
                         <div class="watch_request">
                             <form action="#" method="post">
                             <div class="watch_req_form_grid">
-                                    <div class="ch3_form_elem">
-                                        <label class="ch3_form_elem_title">Name:
-                                        <input class="ch3_form_input" name="name" placeholder="What is your name:">
-                                        </label>
-                                    </div>
-                                    <div class="ch3_form_elem">
-                                        <label class="ch3_form_elem_title">Phone:
-                                        <input class="ch3_form_input" name="phone" placeholder="Your phone number:">
-                                        </label>
-                                    </div>
-                                    <div class="ch3_form_elem">
-                                        <button id="ch3_btn_submit" type="submit" class="btn btn_call btn_submit  btn--w200" disabled="disabled">submit</button>
-                                    </div>
+                                <div class="ch3_form_elem">
+                                    <label class="ch3_form_elem_title">Name:
+                                    <input class="ch3_form_input" name="name" placeholder="What is your name:">
+                                    </label>
                                 </div>
+                                <div class="ch3_form_elem">
+                                    <label class="ch3_form_elem_title">Phone:
+                                    <input class="ch3_form_input" name="phone" placeholder="Your phone number:">
+                                    </label>
+                                </div>
+                                <div class="ch3_form_elem ch3_button_elem">
+                                    <button id="ch3_btn_submit" type="submit" class="btn btn_call btn_submit  btn--w200" disabled="disabled">submit</button>
+                                </div>
+                                
                                 <div class="ch3_form_agree_personal_data">
                                     <!-- по умолчанию кнопка отключена, чекбокс включает -->
-                                <input type="checkbox" class="ch3_checkbox" id="ch3_checkbox" name="watch_req_personal_data" value="agree" onchange="document.querySelector('#ch3_btn_submit').disabled = !this.checked">
-                                <label for="ch3_checkbox" class="ch3_checkbox_label">I agree to the processing of personal data</label>
+                                    <input type="checkbox" class="ch3_checkbox" id="ch3_checkbox" name="watch_req_personal_data" value="agree" onchange="document.querySelector('#ch3_btn_submit').disabled = !this.checked">
+                                    <label for="ch3_checkbox" class="ch3_checkbox_label">I agree to the processing of personal data</label>
                                 </div>
+                            </div>
                             </form>
                         </div>
                     </div>
@@ -240,9 +253,7 @@
                                     from 4000 rub / m2
                                 </div>
                             </div>
-                        </div>
-                       
-                                          
+                        </div>                      
                     </div>
                </div>
             </section>
@@ -250,7 +261,7 @@
             <!-- Section 5 Request for measurement -->
             <section class="wrapper" id="measurement">
                 <!-- сетка на 3 колонки -->
-                <div class="chapter_5_grid">
+                <div class="chapter_5_grid mobile_hidden">
                     <!-- контент левая колонка -->
                     <div class="ch5_measure_help__list">
                         <ol class="ch5_measure_checklist">
@@ -315,12 +326,12 @@
 
             <!-- Section 6 Wildests Fanasies -->
             <section class="wrapper" id="fantasies">
-                <div class="chapter_6_background">
+                <div class="chapter_6_background mobile_hidden">
                     <div class="chapter_6">
                         <!-- первая колонка - список -->
                         <div class="ch6_wildest_fantasies">
                             <h2 class="ch6_title">We realize your<br>wildest fantasies</h2>
-                            <ul class="ch6_styles_list">
+                            <ul class="ch6_styles_list mobile_hidden">
                                 <li class="ch6_styles_item">American classic</li>
                                 <li class="ch6_styles_item">Empire</li>
                                 <li class="ch6_styles_item">Classical</li>
@@ -346,90 +357,113 @@
                             <img src="./img/chapter6_styles_american-classic_3.jpg" width="353" alt="american-classic_1">
                             <img src="./img/chapter6_styles_american-classic_4.jpg" width="353" alt="american-classic_1">
                         </div>
-
+                    </div>
+                </div>
+                <!-- версия Fantasies для мобильных -->
+                <div class="ch6_mobile_version mobile_show">
+                    <h2 class="ch6_title">We realize your<br>wildest fantasies</h2>
+                    <div class="ch6_styles_mobile_photo">
+                        <div class="ch6_mobile_photo_box">
+                            <img src="./img/ch6_background.jpg" width="auto" alt="american-classic_1" class="ch6_mobile_photo_img">
+                        </div>
+                        <div class="ch6_mobile_photo_box" style="display: none;" >
+                            <img src="./img/chapter6_styles_american-classic_2.jpg" width="auto" alt="american-classic_2" class="ch6_mobile_photo_img">
+                        </div>
+                        <div class="ch6_mobile_photo_box" style="display: none;" >
+                            <img src="./img/chapter6_styles_american-classic_3.jpg" width="auto" alt="american-classic_3" class="ch6_mobile_photo_img">
+                        </div>
+                        <div class="ch6_mobile_photo_box" style="display: none;" >
+                            <img src="./img/chapter6_styles_american-classic_4.jpg" width="auto" height="452px" alt="american-classic_4" class="ch6_mobile_photo_img">
+                        </div>
+                        <button class="ch6_project_mobile_btn ch6_project_mobile_btn--prev mobile_show">
+                            <img src="./img/icon-round-left.svg" width="36" height="36">
+                        </button>
+                        <button class="ch6_project_mobile_btn ch6_project_mobile_btn--next mobile_show">
+                            <img src="./img/icon-round-right.svg" width="36" height="36">
+                        </button>
                     </div>
                 </div>
             </section>
 
             <!-- Section 7 Our Clients -->
-            <section class="wrapper" id="reviews">
+            <section class="wrapper mobile_hidden" id="reviews">
                 <div class="chapter_7_background">
                     <div class="chapter_7">
                         <h2 class="ch7_our-clients__title">our clients</h2>
                         <div class="chapter_7_icons">
                             <img src="./img/line_w32.svg" width="32" height="3" alt="line">
                             <img src="./img/ch7_our-clients_ico.svg" width="34" height="30" alt="our clients ico">
-                            <img src="./img/line_w32.svg" width="32 height="3"" alt="line">
+                            <img src="./img/line_w32.svg" width="32" height="3" alt="line">
                         </div>
                         <p class="ch7_our-clients_subtitle">80% of our customers recommend us to their<br>friends and family.</p>
                     <!-- 3 clients reviews -->
-                    <div class="ch7_clients_reviews_grid">
-                        <!-- 1 client review card -->
-                        <div class="ch7_client-review__card">
-                            <div class="ch7_client_header">
-                                <img class="ch7_client_avatar" src="./img/ch7_client_avatar_01.jpg" width="76" style="border-radius: 50%;">
-                                <h3 class="ch7_client_name">Fedosova Maria<br>Konstantinovna</h3>
-                            </div>
-                            <div class="ch7_client_review">
-                                <p>I want to thank the guys for their work. We put your shower part in repair. I am very grateful that I referred to the repair as to my own. Great thanks I express the project to Georgia for its professionalism and approach.</p>
-                                <p>The repair process was turned out in terms, faster than anticipated. Team mobile and professional. Works performed qualitatively without comments. Quality satisfied. Prices democratic. I recommend these masters.</p>
-                            </div>
-                            <div class="ch7_review_info_grid">
-                                <div class="ch7_review_info_grid_item">
-                                    <img src="./img/ch7_review_size_ico.svg" width="33" alt="size">
-                                    <div class="ch7_review_info_size_value">40 M2</div>
+                        <div class="ch7_clients_reviews_grid">
+                            <!-- 1 client review card -->
+                            <div class="ch7_client-review__card">
+                                <div class="ch7_client_header">
+                                    <img class="ch7_client_avatar" src="./img/ch7_client_avatar_01.jpg" width="76" style="border-radius: 50%;">
+                                    <h3 class="ch7_client_name">Fedosova Maria<br>Konstantinovna</h3>
                                 </div>
-                                <div class="ch7_review_info_grid_item">
-                                    <img src="./img/ch7_review_time_ico.svg" width="34" alt="size">
-                                    <div class="ch7_review_info_time_value">48 DAYS</div>
+                                <div class="ch7_client_review">
+                                    <p>I want to thank the guys for their work. We put your shower part in repair. I am very grateful that I referred to the repair as to my own. Great thanks I express the project to Georgia for its professionalism and approach.</p>
+                                    <p>The repair process was turned out in terms, faster than anticipated. Team mobile and professional. Works performed qualitatively without comments. Quality satisfied. Prices democratic. I recommend these masters.</p>
+                                </div>
+                                <div class="ch7_review_info_grid">
+                                    <div class="ch7_review_info_grid_item">
+                                        <img src="./img/ch7_review_size_ico.svg" width="33" alt="size">
+                                        <div class="ch7_review_info_size_value">40 M2</div>
+                                    </div>
+                                    <div class="ch7_review_info_grid_item">
+                                        <img src="./img/ch7_review_time_ico.svg" width="34" alt="size">
+                                        <div class="ch7_review_info_time_value">48 DAYS</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 2 client review card -->
+                            <div class="ch7_client-review__card">
+                                <div class="ch7_client_header">
+                                    <img class="ch7_client_avatar" src="./img/ch7_client_avatar_02.jpg" width="76" style="border-radius: 50%;">
+                                    <h3 class="ch7_client_name">Afanasyev Sergey<br>Alexandrovich</h3>
+                                </div>
+                                <div class="ch7_client_review">
+                                    <p>I want to thank the guys for their work. We put your shower part in repair. I am very grateful that I referred to the repair as to my own.</p>
+                                    <p>Great thanks I express the project to Georgia for its professionalism and approach.</p>
+                                    <p>The repair process was turned out in terms, faster than anticipated. Team mobile and professional. Works performed qualitatively without comments. Quality satisfied. Prices democratic. I recommend these masters.</p>
+                                </div>
+                                <div class="ch7_review_info_grid">
+                                    <div class="ch7_review_info_grid_item">
+                                        <img src="./img/ch7_review_size_ico.svg" width="33" alt="size">
+                                        <div class="ch7_review_info_size_value">90 M2</div>
+                                    </div>
+                                    <div class="ch7_review_info_grid_item">
+                                        <img src="./img/ch7_review_time_ico.svg" width="34" alt="size">
+                                        <div class="ch7_review_info_time_value">128 DAYS</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 3 client review card -->
+                            <div class="ch7_client-review__card">
+                                <div class="ch7_client_header">
+                                    <img class="ch7_client_avatar" src="./img/ch7_client_avatar_03.jpg" width="76" style="border-radius: 50%;">
+                                    <h3 class="ch7_client_name">Kiriev Egor<br>Leonidovich</h3>
+                                </div>
+                                <div class="ch7_client_review">
+                                    <p>I want to thank the guys for their work. We put your shower part in repair. I am very grateful that I referred to the repair as to my own. Great thanks I express the project to Georgia for its professionalism and approach.</p>
+                                    <p>The repair process was turned out in terms, faster than anticipated. Team mobile and professional. Works performed qualitatively without comments. Quality satisfied.</p>
+                                    <p>Prices democratic. I recommend these masters.</p>
+                                </div>
+                                <div class="ch7_review_info_grid">
+                                    <div class="ch7_review_info_grid_item">
+                                        <img src="./img/ch7_review_size_ico.svg" width="33" alt="size">
+                                        <div class="ch7_review_info_size_value">56 M2</div>
+                                    </div>
+                                    <div class="ch7_review_info_grid_item">
+                                        <img src="./img/ch7_review_time_ico.svg" width="34" alt="size">
+                                        <div class="ch7_review_info_time_value">86 DAYS</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                         <!-- 2 client review card -->
-                         <div class="ch7_client-review__card">
-                            <div class="ch7_client_header">
-                                <img class="ch7_client_avatar" src="./img/ch7_client_avatar_02.jpg" width="76" style="border-radius: 50%;">
-                                <h3 class="ch7_client_name">Afanasyev Sergey<br>Alexandrovich</h3>
-                            </div>
-                            <div class="ch7_client_review">
-                                <p>I want to thank the guys for their work. We put your shower part in repair. I am very grateful that I referred to the repair as to my own.</p>
-                                <p>Great thanks I express the project to Georgia for its professionalism and approach.</p>
-                                <p>The repair process was turned out in terms, faster than anticipated. Team mobile and professional. Works performed qualitatively without comments. Quality satisfied. Prices democratic. I recommend these masters.</p>
-                            </div>
-                            <div class="ch7_review_info_grid">
-                                <div class="ch7_review_info_grid_item">
-                                    <img src="./img/ch7_review_size_ico.svg" width="33" alt="size">
-                                    <div class="ch7_review_info_size_value">90 M2</div>
-                                </div>
-                                <div class="ch7_review_info_grid_item">
-                                    <img src="./img/ch7_review_time_ico.svg" width="34" alt="size">
-                                    <div class="ch7_review_info_time_value">128 DAYS</div>
-                                </div>
-                            </div>
-                        </div>
-                         <!-- 3 client review card -->
-                         <div class="ch7_client-review__card">
-                            <div class="ch7_client_header">
-                                <img class="ch7_client_avatar" src="./img/ch7_client_avatar_03.jpg" width="76" style="border-radius: 50%;">
-                                <h3 class="ch7_client_name">Kiriev Egor<br>Leonidovich</h3>
-                            </div>
-                            <div class="ch7_client_review">
-                                <p>I want to thank the guys for their work. We put your shower part in repair. I am very grateful that I referred to the repair as to my own. Great thanks I express the project to Georgia for its professionalism and approach.</p>
-                                <p>The repair process was turned out in terms, faster than anticipated. Team mobile and professional. Works performed qualitatively without comments. Quality satisfied.</p>
-                                <p>Prices democratic. I recommend these masters.</p>
-                            </div>
-                            <div class="ch7_review_info_grid">
-                                <div class="ch7_review_info_grid_item">
-                                    <img src="./img/ch7_review_size_ico.svg" width="33" alt="size">
-                                    <div class="ch7_review_info_size_value">56 M2</div>
-                                </div>
-                                <div class="ch7_review_info_grid_item">
-                                    <img src="./img/ch7_review_time_ico.svg" width="34" alt="size">
-                                    <div class="ch7_review_info_time_value">86 DAYS</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     </div>
                 </div>
             </section>
@@ -482,10 +516,10 @@
                         <div class="chapter_9">
                             <!-- address -->
                             <address class="ch9_address">
-                                <span class="ch9_address_content">
-                                    Rostov-on-Don, Nansen St., 239 Shopping Center<br>
-                                    Decorum Tel <a href="tel:+79287683229" type="phone">+7  (928)  768  32  29</a>
-                                </span>
+                                <p class="ch9_address_content">
+                                    Rostov-on-Don, Nansen St., 239 Shopping Center<br class="mobile_hidden">
+                                    Decorum <span class="ch9_mobile_tel">Tel <a href="tel:+79287683229" type="phone">+7 (928) 768 32 29</a></span>
+                                </p>
                             </address>
                             <!-- social links  -->
                             <div class="ch9_social_links">
@@ -495,7 +529,7 @@
 
                             <!-- map -->
                              <div class="ch9_map">
-                                &nbsp;
+                                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad3522e7b8681d2007657e62809a3d5f4102d80208da5613b4d0d1c64761ac46d&amp;source=constructor" width="953" height="467" frameborder="0"></iframe>
                              </div>
 
                         </div>
@@ -505,7 +539,7 @@
                      
         </main>
         <footer>
-            <div class="footer__wrapper">
+            <div class="footer__wrapper mobile_hidden">
                 <div class="header__logo">
                     IC "Repair Design Project"</div>
                 <nav class="header__nav">

@@ -56,6 +56,57 @@ body {
     color: #FFFFFF;
 }
 
+.black-font {
+    color: black;
+}
+
+/* кнопки */
+
+.btn_submit {
+    height: 51px;
+}
+
+.ch2_project_mobile_btn, .ch6_project_mobile_btn {
+    display: flex;
+    background-color: transparent;
+    position: absolute;
+    border-color: transparent;
+    top: 0;
+    z-index: 20;
+    cursor: pointer;
+    height: 100%;
+    width: 15%;
+    align-self: center;
+}
+
+.ch2_project_mobile_btn--prev, .ch6_project_mobile_btn--prev {
+    left: 0;
+}
+
+.ch2_project_mobile_btn--next, .ch6_project_mobile_btn--next {
+    right: 0;
+}
+
+.ch2_project_mobile_btn:hover, .ch6_project_mobile_btn:hover {
+    opacity: 0.85;
+    transition: 0.2s;
+    transform: scale(1.2);    
+}
+
+.ch6_mobile_photo_img {
+    max-height: 452px;
+}
+
+/* класс для пометки блоков на скрытие в мобильной версии */
+.mobile_hidden {
+    display: block;
+}
+
+/* класс для отображения блоков в мобильной версии */
+.mobile_show {
+    display: none;
+}
+
 .header__wrapper, .footer__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -71,6 +122,7 @@ body {
     width: 1440px;
     margin: 0 auto;
 }
+
 .header__nav {
     display: flex;
     flex-wrap: wrap;
@@ -135,9 +187,6 @@ address>a:hover, address>a:active, address>a:focus {
     width: 213px;
 }
 
-
-
-
 .btn:hover, .btn:focus, .btn:active {
    background-color: #E3B873;
    transition: 0.3s;
@@ -163,7 +212,7 @@ section {
     margin: 0 auto;
 }
 
-.buttons {
+.ch1_buttons_block {
     display: flex;
     margin-right: 10px;
     flex-wrap: no-wrap;
@@ -177,8 +226,8 @@ section {
     padding-left: 134px;
     z-index: 1;    
     background-color: rgba(0, 0, 0, 0.7);
-    /* border: 1px solid white; */
 }
+
 .chapter_1_background {
     width: 100%;
     height: 100%;
@@ -195,6 +244,7 @@ h1 {
     max-width: 15em;
     line-height: 132%;
 }
+
 .title_top {
     font-size: 40px;
     text-transform: uppercase;
@@ -218,8 +268,6 @@ h1 {
     height: 1074px;
     padding-top: 107px;
     padding-left: 134px;
-    /* border-color: blue;
-    border: 1px solid green; */
 }
 
 .ch2__projects_list {
@@ -236,12 +284,14 @@ h1 {
     color: rgba(255, 255, 255, 0.3);
     padding-bottom: 7px;
 }
+
 .ch2_project_list_item_highlight {
     color: #E3B873;
     border-bottom: 1px solid #E3B873;
     cursor: pointer;
     transition: 0.15s;
 }
+
 .ch2_project_list_item:hover, .ch2_project_list_item:focus, .ch2_project_list_item:active {
     color: #E3B873;
     opacity: 85%;
@@ -254,8 +304,16 @@ h1 {
     width: 1171px;
     display: grid;
     grid-template-columns: 442px 1fr;
-    grid-template-rows: 25px 1fr;
-    gap: 50px;
+    grid-template-rows: 25px 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.ch2_project_photo {
+    position: relative;
+    display: flex;
+    grid-row: span 3;
+    height: fit-content;
+    align-items: center;
 }
 
 /* контейнер для таблицы "инфо о проекте" 2х2*/
@@ -271,6 +329,7 @@ h1 {
 .ch2_project_info_grid>div {
     width: fit-content;
 }
+
 .ch2_title {
     font-family: Yeseva One;
     font-size: 27px;
@@ -284,6 +343,7 @@ h1 {
     line-height: 27px;
     margin-bottom: 42px;
 }
+
 .ch2_subtitle {
     font-family: Yeseva One;
     font-size: 18px;
@@ -300,13 +360,16 @@ h1 {
     display: flex;
     flex-wrap: nowrap;
     column-gap: 17px;
+    height: fit-content;
 }
+
 .big_dot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.3);
 }
+
 .big_dot_active {
     background-color: #FFFFFF;
 }
@@ -314,6 +377,7 @@ h1 {
 .arrow_left {
     margin-right: 12px;
 }
+
 .arrow_right {
     margin-left: 12px;
 }
@@ -322,12 +386,6 @@ h1 {
     opacity: 65%;
     cursor: pointer;
     transition: 0.15s;
-}
-
-/* Секция 3 */
-
-.black-font {
-    color: black;
 }
 
 .chapter_3 {
@@ -345,8 +403,8 @@ h1 {
     width: 817px;
     height: 870px;
     padding: 0;
+    z-index: 2;
 }
-
 
 .chapter3_title {   
     display: flex; 
@@ -380,7 +438,7 @@ h1 {
     position: relative;
     width: 817px;
     height: 434px;
-    background-color: #000000;
+    background-color: #131313;
     padding: 0;
     margin-bottom: 62px;
 }
@@ -408,6 +466,7 @@ h1 {
     font-size: 18px;
     line-height: 204%;
     width: 681px;
+    color: black
 }
 
 .watch_request {
@@ -442,8 +501,7 @@ h1 {
     color: black;
     border: 0;
     padding-block: 8px;
-    border-bottom: 1px solid rgba(54, 54, 54, 0.2);
-    
+    border-bottom: 1px solid rgba(54, 54, 54, 0.2);    
 }
 
 .ch3_form_input:focus, .ch3_form_input:active {
@@ -452,16 +510,17 @@ h1 {
     border: 0;
     outline: 0;
 }
+
 .ch3_form_input::placeholder {
     color: black;
 }
-
 
 .ch3_form_agree_personal_data {
     width: fit-content;
     display: flex;
     flex-direction: row;
     margin-inline: auto;
+    grid-column: span 3;
 }
 
 .ch3_checkbox {
@@ -472,7 +531,6 @@ h1 {
     justify-content: center;
     margin-right: 8px;
     accent-color: #E3B873;
-    /* color: white; */
 }
 
 .ch3_checkbox_label {
@@ -483,10 +541,6 @@ h1 {
 .ch3_checkbox_label:checked {
     background-color: rgb(255, 255, 255);
     border-color: #FFFFFF;
-}
-
-.btn_submit {
-    height: 51px;
 }
 
 #ch3_btn_submit[disabled] {
@@ -529,7 +583,9 @@ h1 {
 }
 
 .ch4_typeofrepair_card {
+    width: fit-content;
     position: relative;
+    /* border: 1px solid rgba(54,  54,  54,  0.2); */
 }
 
 .ch4_typeofrepair_title {
@@ -538,6 +594,7 @@ h1 {
     margin-bottom: 13px;
     color: black;
 }
+
 .ch4_typeofrepair_info {
     padding: 25px 102px 49px 31px;
     margin-inline: auto;
@@ -549,7 +606,7 @@ h1 {
     color: #959595;
     line-height: 205%;
     font-size: 13px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 10px 10px 20px 3px rgba(0, 0, 0, 0.15);
 }
 
 .ch4_typeofrepair_cost {
@@ -601,9 +658,8 @@ h1 {
     min-height: 42px;
     align-items: center;
     counter-increment: list-index;
-    margin-bottom: 105px; /* уточнить */
-    font-size: 14px;
-    
+    margin-bottom: 105px;
+    font-size: 14px;    
 }
 
 .ch5_measure_checklist__item:before {
@@ -647,7 +703,6 @@ h1 {
     padding-block: 27px;
     padding-inline: 49px;
 }
-/* стили формы ch5 */
 
 .ch5__form__elem {
     display: flex;
@@ -665,7 +720,6 @@ h1 {
     color: rgba(255, 255, 255, 0.5);
 }
 
-
 .ch5_form_input {
     display: block;
     width: 408px;
@@ -679,15 +733,13 @@ h1 {
 }
 
 .ch5_form_input:focus, .ch5_form_input:active {
-    /* background-color: #e3b8731a; */
-    /* border-color: rgb(248, 184, 22); */
     border-bottom: 2px solid rgba(214, 168, 29, 0.5);
     outline: 0;
 }
+
 .ch5_form_input::placeholder {
     color: rgb(255, 255, 255);
 }
-
 
 .ch5_form_agree_personal_data {
     display: flex;
@@ -729,7 +781,6 @@ h1 {
     cursor: not-allowed;
 }
 
-
 .ch5_measure__helpsave {
     display: flex;
     flex-direction: row;
@@ -737,7 +788,6 @@ h1 {
     width: 506px;
     margin-top: 42px;
     margin-left: 31px;
-    /* border: 1px dashed green; */
 }
 
 .ch5_helpsave_item {
@@ -750,14 +800,13 @@ h1 {
 
 .chapter_6_background {
     position: relative;
-    /* border: 10px dotted green; */
     height: 100%;
     width: 100%;
     background-image: url('../img/ch6_background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 0;
-    }
+}
     
 .chapter_6 {
     display: grid;
@@ -770,7 +819,6 @@ h1 {
     background: linear-gradient(65deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.90));
 }
     
-
 .ch6_wildest_fantasies {
     display: flex;
     flex-direction: column;
@@ -905,7 +953,6 @@ h1 {
     height: minmax(432px, auto);
     display: flex;
     flex-direction: column;
-    /* border: 2px dotted     rgb(10, 117, 224); */
     padding: 20px 30px 10px 24px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
 }
@@ -938,6 +985,7 @@ h1 {
 .ch7_client_review>p {
     margin-bottom: 5px;
 }
+
 .ch7_review_info_grid {
     position: absolute;
     bottom: -26px;
@@ -978,7 +1026,6 @@ h1 {
     background-image: url('../img/ch8_background.png');
     background-repeat: no-repeat;
     background-size: cover;
-    /* border: 1px dashed blue; */
 }
 
 .ch8__questions-form__title {
@@ -992,21 +1039,17 @@ h1 {
 
 .chapter_8 {
     position: absolute;
-    /* z-index: 2; */
     top: -225px;
     left: calc(50% - 883px/2);
     width: 883px;
-    /* min-height: auto; */
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-inline: auto;
     margin-bottom: 52px;
     padding-block: 34px;
-    /* border: 5px dashed green; */
     background-color: #181818;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
-
 }
 
 .ch8_questions-form_grid {
@@ -1018,10 +1061,6 @@ h1 {
     margin-inline: auto;
 }
 
-.ch8__form__elem {
-    /* border: 2px dotted green; */
-}
-
 #ch8_form_question, #ch8_form_agree, #ch8_form_submit {
     display: flex;
     grid-column: span 2;
@@ -1029,7 +1068,6 @@ h1 {
     align-content: center;
     width: 100%;
 }
-
 
 .ch8__form__elem {
     display: flex;
@@ -1055,10 +1093,10 @@ h1 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     outline: 0;
 }
+
 .ch8_form_input::placeholder {
     color: rgb(255, 255, 255);
 }
-
 
 .ch8_form_agree_personal_data {
     width: fit-content;
@@ -1103,12 +1141,22 @@ h1 {
     cursor: not-allowed;
 }
 
+.chapter_9 {
+    display: grid;
+    grid-template-columns: 1fr;
+    address {
+        display: block;
+    }
+    /* div {
+        display: block;
+    } */
+}
+
 .ch9_address {
     display: flex;
     justify-content: center;
     margin-bottom: 26px;    
     margin-inline: auto;
-    /* border: 2px dashed red; */
 }
 
 .ch9_address_content {
@@ -1120,12 +1168,12 @@ h1 {
     text-transform: uppercase;
 }
 
-.ch9_address_content>A {
+.ch9_address_content A {
     color:  #E3B873;
     text-decoration: none;
 }
 
-.ch9_address_content>A:hover, .ch9_address_content>A:active {
+.ch9_address_content A:hover, .ch9_address_content>A:active {
     color: yellow;
     transition: 0.2s;
 }
@@ -1144,29 +1192,410 @@ h1 {
     display: flex;
     margin-inline: auto;
     margin-bottom: 67px;
-    width: calc(883px+35px*2);
-    height: 467px;
-    background-image: url('../img/ch9_map.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size:contain;
+    max-width: calc(883px+35px*2);
+    max-height: 467px;
+    /* background-image: url('../img/ch9_map.jpg'); */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-size:contain; */
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* АДАПТИВНЫЙ БЛОК */
+/*  АДАПТИВНЫЙ БЛОК  
+    Мобильная верстка на экранах < 1300 px. */
 
-/* Мобильная верстка на экранах < 1300 px. */
+
 @media (max-width: 1300px) {
-    /* todo */
-}
 
-/* Опционально: модифицировать мобильную верстку для разрешения > 768 px. */
-@media (min-width: 768px) and (max-width: 1300){
-    /* todo */
-}
+    .wrapper {
+        width:100vw;
+        max-width: 100vw;
+        margin-inline: 0;
+    }
 
+    .mobile_hidden {
+        display: none;
+    }
 
-/* горизонтальная ориентация */
-@media (orientation: landscape){
-}
+    .mobile_show {
+        display: block;
+    }
+
+    .header__logo {
+        margin-left: 28px;
+    }
+
+    .phone {
+        color: white;
+        text-decoration: none;
+    }
+
+    .chapter_1_background {
+        background-position: top;
+        background-size: cover;
+    }
+
+    .chapter_1 {
+        padding-inline: 18px;
+        padding-top: 85px;
+        padding-bottom: 85px;
+        height: max-content;
+    }
+
+    .header__wrapper, .footer__wrapper {
+        height: 50px
+    }
+
+    .title_top {
+        font-size: 23px;
+    }
+
+    .text_info {
+        font-size: 14px;
+    }
+
+    .ch1_buttons_block {
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        button:first-child {
+            margin-bottom: 21px;
+        };
+        button {
+            min-width: 338px;
+        }
+    }
     
+    .btn {
+        margin-left: 0;
+    }
+
+    .btn_calc_cost {
+        margin-bottom: 26px;
+    }
+
+    .chapter_2 {
+        padding-top: 0;
+        padding-left: 0;
+        height: max-content;
+    }
+    .ch2_projects_grid {
+        width: auto;
+        padding-inline: 18px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 25px;
+    }
+    .ch2_project_content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .ch2_title {
+        display: flex;
+        margin-inline: auto;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .ch2_description {
+        margin-inline: 15%;
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 0;
+        max-width: 67ch;
+    }
+
+    .ch2_projects_intro {
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    .ch2_project_info_grid {
+        margin-bottom: 10px;
+        margin-inline: auto;
+    }
+
+    .ch2_project_photo {
+        display: flex;
+        width: auto;
+        justify-self: center;
+        /* border: 1px dashed blue; */
+    }
+
+    .chapter_3_intro {
+        top: 0;
+        width: auto;
+        height: auto;
+        background-color: #131313;
+    }
+
+    .ch2_project_image {
+        width: auto;
+    }
+    
+    .ch2_project_image:before {
+        content: "";
+    }
+
+    .chapter3_title:first-child {
+        margin-top: 36px;
+    }
+
+    .chapter_3_video {
+        margin-inline: auto;
+        margin-bottom: 16px;
+    }
+
+    .ch_3_video_placeholder {
+        width: 100%;
+    }
+
+    .video-play-ico {
+        transform: scale(0.75);
+    }
+
+    .ch3_online_desc {
+        color: white;
+        width: 70%;
+        padding-block: 0;
+        padding-inline: 17px;
+        font-size: 15px;
+    }
+
+    .watch_request {
+        width: 100%;
+    }
+
+    .watch_req_form_grid {
+        max-width: 340px;
+        grid-template-columns: 1fr;
+        /* border: 2px dashed red; */
+        justify-items: center;
+    }
+
+    .ch3_form_elem {
+        flex-direction: column;
+        width: 100%;
+    }
+    .ch3_form_input {
+        justify-content: center;
+        display: block;
+        width: 100%;
+        color: white;
+        background-color: #131313;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .ch3_form_input:focus, .ch3_form_input:active {
+        background-color: #131313;
+        border-bottom: 1px solid rgba(255, 255, 255, 1);
+        outline: 0;
+    }
+    .ch3_form_input::placeholder {
+        color: white;
+    }
+    .ch3_form_elem_title {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    .ch3_button_elem {
+        order: 1;
+        .btn {
+            width: 100%;
+        }
+    }
+    .ch3_checkbox_label {
+        color: white;
+    }
+    .ch3_form_agree_personal_data {
+        grid-column: span 1;
+    }
+
+    .chapter_4 {
+        padding-bottom: 250px;
+    }
+    .chapter4_title:first-child {
+        padding-top: 54px;
+    }
+    .ch4_types_grid {
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+    .ch4_typeofrepair_card {
+        justify-self: center;
+        height: 640px;
+    }
+
+    .ch4_typeofrepair_info {
+        margin-inline: 0 auto;
+        position: relative;
+        top: -127px;
+        left: 0
+    }
+    
+    .ch6_title {
+        display: block;
+        position: absolute;
+        text-align: center;
+        margin: 0 auto;
+        top: -220px;
+        left: 100px;
+        right: 100px;
+        z-index: 10;
+        height: fit-content;
+        border: 1px solid rgba(255,  255,  255,  0.1);
+    }
+
+    .ch6_mobile_version {
+        display: flex;
+        justify-content: center;
+    }
+    .ch6_styles_mobile_photo {
+        display: flex;
+        position: absolute;
+        top: -130px;
+        margin-inline: 17px;
+        justify-content: center;
+        max-width: 900px;
+        z-index: 10;        
+        /* border: 1px dashed green; */
+    }
+    
+    .chapter_89_background_img {
+        z-index: 0;
+        background: transparent;
+    }
+
+    .chapter_89_bg_dark {
+        background-color: #131313;
+        min-height: fit-content;
+        padding-top: 0;
+    }
+
+    .chapter_8 {
+        background-color: transparent;
+        position: relative;
+        padding-top: 500px;
+        left: 0;
+        top: 0;
+        box-shadow: none;
+        width: 600px;
+    }
+    .ch8_form_input {
+        background-color: transparent;
+    }
+    .ch8_questions-form_grid {
+        min-width: 500px;
+        grid-template-columns: 1fr;
+        gap: 43px 0;
+    }
+    
+    #ch8_form_question, #ch8_form_agree, #ch8_form_submit {
+        grid-column: span 1;
+    }
+
+
+    .ch9_map {
+        order: -1;
+        width: 650px;
+        height: 400px;
+        margin-inline: auto;
+        justify-content: center;
+        iframe {
+            width: 100%;
+            height: 100%;           
+        }
+    }
+
+    .ch9_mobile_tel {
+        display: block;
+    }
+}
+
+/* WIDTH: 800px  */
+
+
+@media (max-width: 799px) {
+
+    .ch2_project_image {
+        width: auto;
+        height: fit-content;
+    }
+    .chapter_3_video {
+        margin-inline: 18px;
+        width: auto;
+        height: fit-content;
+    }
+    .video-play-ico {
+        transform: scale(0.5);
+    }
+    .watch_req_form_grid {
+        max-width: 90%;
+    }
+    #ch3_btn_submit {
+        font-size: 13px;
+    }
+    .ch4_types_grid {
+        grid-template-columns: 1fr;
+        margin-inline: 17px;
+    }
+    .ch9_address_content {
+        margin-inline: 1.5em;
+    }
+
+    .chapter_8 {
+        padding-top: 360px;
+    }
+    
+    .ch6_styles_mobile_photo {
+        max-height: 452px;
+    }
+
+}
+
+/* WIDTH: 551-750px */
+@media (min-width: 551px) and (max-width: 680px)  {
+    .chapter_8 {
+        padding-top: 270px;
+        margin-inline: 17px;
+        width: 100%;
+    }
+    #ch8_btn_submit.btn {
+        width: 90%;
+    } 
+
+/* WIDTH: 550px  */
+
+@media (max-width: 550px) {
+
+    #ch8_btn_submit.btn {
+        width: 90%;
+    }    
+
+    .ch2_project_image {
+        width: 100%;
+    }
+
+    .ch3_online_desc {
+        width: 100%;
+        padding-inline: 17px;
+    }
+    .watch_req_form_grid {
+        width: 100%;
+    }
+    
+    .chapter_8 {
+        width: 90%;
+        padding-top: 60px;
+        padding-inline: 17px;
+        /* border: 1px dashed red; */
+    }
+    .ch9_map {
+        width: 100%;
+        margin-inline: 0;
+    }
+    .ch9_address {
+        max-width: 43ch;
+    }
+
+}
+
