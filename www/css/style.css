@@ -570,7 +570,7 @@ h1 {
         margin-right: 9px;
         margin-left: 7px;
         margin-bottom: 31px;
-    }
+    };
 }
 
 .ch4_types_grid {
@@ -918,7 +918,7 @@ h1 {
     align-items: center;
     img {
         margin-inline: 4px;
-    }
+    };
 }
 
 .ch7_our-clients_ico, .ch7_our-clients_subtitle {
@@ -1146,10 +1146,7 @@ h1 {
     grid-template-columns: 1fr;
     address {
         display: block;
-    }
-    /* div {
-        display: block;
-    } */
+    };   
 }
 
 .ch9_address {
@@ -1480,9 +1477,11 @@ h1 {
         box-shadow: none;
         width: 600px;
     }
+
     .ch8_form_input {
         background-color: transparent;
     }
+
     .ch8_questions-form_grid {
         min-width: 500px;
         grid-template-columns: 1fr;
@@ -1503,7 +1502,7 @@ h1 {
         iframe {
             width: 100%;
             height: 100%;           
-        }
+        };
     }
 
     .ch9_mobile_tel {
@@ -1549,19 +1548,21 @@ h1 {
     .ch6_styles_mobile_photo {
         max-height: 452px;
     }
-
 }
 
 /* WIDTH: 551-750px */
+
 @media (min-width: 551px) and (max-width: 680px)  {
     .chapter_8 {
         padding-top: 270px;
         margin-inline: 17px;
         width: 100%;
     }
+
     #ch8_btn_submit.btn {
         width: 90%;
     } 
+}
 
 /* WIDTH: 550px  */
 
@@ -1579,6 +1580,7 @@ h1 {
         width: 100%;
         padding-inline: 17px;
     }
+
     .watch_req_form_grid {
         width: 100%;
     }
@@ -1589,13 +1591,13 @@ h1 {
         padding-inline: 17px;
         /* border: 1px dashed red; */
     }
+
     .ch9_map {
         width: 100%;
         margin-inline: 0;
     }
+
     .ch9_address {
         max-width: 43ch;
     }
-
 }
-
