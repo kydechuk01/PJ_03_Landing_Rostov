@@ -2,6 +2,8 @@
 Автор: Александр Климок / [kydechuk01](https://github.com/kydechuk01/)
 <br>Дата: 13.06.2024 
 
+#### Задача: на основе макета в Figma воссоздать точную копию одностраничного сайта с заданными стилями и эффектами.
+
 ### В работе использованы:
 - Figma, HTML5, PHP, JS, CSS, Google-fonts, Markdown
 - Git via [github.com](https://github.com)
